@@ -34,6 +34,7 @@
         Factor=1,
         }">
 
+       
         <Entry Placeholder="Name"></Entry>
         <Entry Placeholder="SurName"></Entry>
         <Button Text="Just Button" HorizontalOptions="Center"></Button>
