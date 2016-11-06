@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             x:Class="Layouts.Views.AbsolutePage">
+  <AbsoluteLayout>
+    <BoxView AbsoluteLayout.LayoutBounds="0,0,1,100" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"  Color="Aqua"/>
+    <controls:CircleImage Source="icon.png" 
+                          Aspect="AspectFill" 
+                          AbsoluteLayout.LayoutFlags="XProportional"
+                          AbsoluteLayout.LayoutBounds="0.5,67,66,66">
+    </controls:CircleImage>
+    <BoxView Color="Red" AbsoluteLayout.LayoutBounds="0,.5,.02,.2" AbsoluteLayout.LayoutFlags="All"></BoxView>
+    <BoxView Color="Teal" AbsoluteLayout.LayoutBounds="1,.5,.02,.2" AbsoluteLayout.LayoutFlags="All"></BoxView>
+    <Label 
+      AbsoluteLayout.LayoutBounds=".5,.5,Autosize, Autosize" 
+      AbsoluteLayout.LayoutFlags="PositionProportional" 
+      HorizontalTextAlignment="Center" 
+      Text="This is Absolute Layout"/>
+  </AbsoluteLayout>
+</ContentPage>
