@@ -1,7 +1,9 @@
-﻿using System;
+﻿using ImageCircle.Forms.Plugin.UWP;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
@@ -29,9 +31,9 @@ namespace Layouts.UWP
         public App()
         {
             this.InitializeComponent();
+
             this.Suspending += OnSuspending;
         }
-
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
         /// will be used such as when the application is launched to open a specific file.
@@ -39,7 +41,11 @@ namespace Layouts.UWP
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-
+            var rendererAssemblies = new[]
+            {
+                typeof(ImageCircleRenderer).GetTypeInfo().Assembly
+            };
+            Xamarin.Forms.Forms.Init(e, rendererAssemblies);
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {

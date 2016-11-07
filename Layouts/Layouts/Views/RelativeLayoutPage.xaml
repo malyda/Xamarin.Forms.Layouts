@@ -3,46 +3,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Layouts.Views.RelativeLayoutPage">
   <ScrollView >
-  <RelativeLayout Padding="0,20,0,0">
-    <Label 
-      x:Name="WelcomeLabel"
-      Text="This is Relative Layout"  
-      HorizontalTextAlignment="Center"
-      RelativeLayout.YConstraint =
-      "{ConstraintExpression Type=RelativeToParent,
-                             Property=Height,
-                             Factor=.1
-                             }"
-      RelativeLayout.WidthConstraint =
-      "{ConstraintExpression Type=RelativeToParent,
-                             Property=Width,
-                             Factor=1
-                             }"
-           />
-  
-      <StackLayout  Padding="20,0,20,0"
-       RelativeLayout.YConstraint =
-          "{ConstraintExpression Type=RelativeToView,
-                                 ElementName=WelcomeLabel,
-                                 Property=Y,
-                                 Factor=1,
-                                 Constant=100
-                                 }" 
+    <RelativeLayout Padding="0,20,0,0">
+      <Label 
+        x:Name="WelcomeLabel"
+        Text="This is Relative Layout"  
+        HorizontalTextAlignment="Center"
+        RelativeLayout.YConstraint =
+        "{ConstraintExpression Type=RelativeToParent,
+                               Property=Height,
+                               Factor=.1
+                               }"
         RelativeLayout.WidthConstraint =
         "{ConstraintExpression Type=RelativeToParent,
-        Property=Width,
-        Factor=1,
-        }">
+                               Property=Width,
+                               Factor=1
+                               }"
+             />
+  
+        <StackLayout
+         RelativeLayout.YConstraint =
+            "{ConstraintExpression Type=RelativeToView,
+                                   ElementName=WelcomeLabel,
+                                   Property=Y,
+                                   Factor=1,
+                                   Constant=100
+                                   }" 
+          RelativeLayout.WidthConstraint =
+            "{ConstraintExpression Type=RelativeToParent,
+                                   Property=Width,
+                                   Factor=1,
+                                   }" >
 
        
-        <Entry Placeholder="Name"></Entry>
-        <Entry Placeholder="SurName"></Entry>
-        <Button Text="Just Button" HorizontalOptions="Center"></Button>
-        <Slider Value=".25"></Slider>
-        <Switch IsEnabled="True"></Switch>
-        <TimePicker></TimePicker>
-      </StackLayout>
-    
-  </RelativeLayout>
+          <Entry Placeholder="Name"></Entry>
+          <Entry Placeholder="SurName"></Entry>
+          <Button Text="Just Button" HorizontalOptions="Center"></Button>
+          <Slider Value=".25"></Slider>
+          <Switch IsEnabled="True"  HorizontalOptions="Center"></Switch>
+          <TimePicker></TimePicker>
+        </StackLayout>
+    </RelativeLayout>
   </ScrollView>
 </ContentPage>

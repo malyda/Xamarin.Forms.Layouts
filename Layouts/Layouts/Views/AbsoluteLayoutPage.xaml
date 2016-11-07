@@ -4,9 +4,18 @@
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
              x:Class="Layouts.Views.AbsolutePage">
   <AbsoluteLayout>
-    <BoxView AbsoluteLayout.LayoutBounds="0,0,1,100" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"  Color="Aqua"/>
+    <!-- 
+      LayoutBounds = Top, Left, Width, Height 
+      LayoutFlags = Proportional, or not, could be combinated
+    !-->
+    <BoxView AbsoluteLayout.LayoutBounds="0,0,1,100" 
+             AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"  
+             Color="Aqua"/>
+    <!-- 
+      CircleImageView from https://github.com/jamesmontemagno/ImageCirclePlugin
+    !-->
     <controls:CircleImage Source="icon.png" 
-                          Aspect="AspectFill" 
+                          Aspect="AspectFill"
                           AbsoluteLayout.LayoutFlags="XProportional"
                           AbsoluteLayout.LayoutBounds="0.5,67,66,66">
     </controls:CircleImage>

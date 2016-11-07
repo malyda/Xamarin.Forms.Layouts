@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Layouts.Views.StackLayoutPage">
   
-    <StackLayout Padding="0,20,0,0" Spacing="30" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Teal">
+    <StackLayout Padding="0,20,0,0" Spacing="30" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
       <Label Text="Now you are looking at StackLayout" HorizontalOptions="Center"/>
       <BoxView Color="Aqua" HorizontalOptions="FillAndExpand"/>
       <Label Text="Spacing = 30" HorizontalOptions="Center" />
