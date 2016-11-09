@@ -34,6 +34,11 @@ namespace Layouts.Views
                         {
                             Text = "RelativeLayout",
                              Command = showPageCommand(new RelativeLayoutPage())
+                        },
+                        new Button
+                        {
+                            Text = "Handle user actions",
+                             Command = showPageCommand(new ViewModel())
                         }
                     }
             };
