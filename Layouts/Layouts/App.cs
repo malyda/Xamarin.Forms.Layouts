@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using Layouts.Views;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Layouts
 {
     public class App : Application
