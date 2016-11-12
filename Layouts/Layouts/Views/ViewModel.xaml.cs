@@ -11,9 +11,9 @@ namespace Layouts.Views
     public partial class ViewModel : ContentPage
     {
         // Handle number of Clicks on Button
-        int numberOfButtonClicks;
+        int _numberOfButtonClicks;
         // Handle number of Clicks on Label
-        int numberOfLabelClicks;
+        int _numberOfLabelClicks;
         public ViewModel()
         {
             InitializeComponent();
@@ -33,8 +33,8 @@ namespace Layouts.Views
         /// </summary>
         public void LabelClick()
         {
-            numberOfLabelClicks++;
-            ClickedLabel.Text = "NumberOfLabelClicks: " + numberOfLabelClicks;
+            _numberOfLabelClicks++;
+            ClickedLabel.Text = "NumberOfLabelClicks: " + _numberOfLabelClicks;
         }
 
         /// <summary>
@@ -44,8 +44,18 @@ namespace Layouts.Views
         /// <param name="e">Additional Click parameters</param>
         public void ButtonClick(Object sender, EventArgs e)
         {
-            numberOfButtonClicks++;
-            ClickedButton.Text = "NumberOfButtonClicks: " + numberOfButtonClicks;
+            _numberOfButtonClicks++;
+            ClickedButton.Text = "NumberOfButtonClicks: " + _numberOfButtonClicks;
+        }
+
+        /// <summary>
+        /// Repeats text from Entry when user changed it.
+        /// </summary>
+        /// <param name="sender">Object which fired this event</param>
+        /// <param name="e">Additional Click parameters</param>
+        private void TexChanged(object sender, TextChangedEventArgs e)
+        {
+            ChangedText.Text = "You wrote: " + e.NewTextValue;
         }
     }
 }

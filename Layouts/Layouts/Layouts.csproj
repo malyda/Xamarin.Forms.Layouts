@@ -40,6 +40,9 @@
     <Compile Include="Views\AbsoluteLayoutPage.xaml.cs">
       <DependentUpon>AbsoluteLayoutPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CombinatedLayoutPage.xaml.cs">
+      <DependentUpon>CombinatedLayoutPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainPage.cs" />
     <Compile Include="Views\RelativeLayoutPage.xaml.cs">
       <DependentUpon>RelativeLayoutPage.xaml</DependentUpon>
@@ -93,6 +96,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\ViewModel.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\CombinatedLayoutPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

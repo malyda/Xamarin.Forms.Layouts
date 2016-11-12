@@ -39,6 +39,11 @@ namespace Layouts.Views
                         {
                             Text = "Handle user actions",
                              Command = showPageCommand(new ViewModel())
+                        },
+                        new Button
+                        {
+                            Text = "Absolute + Grid + Styles",
+                            Command = showPageCommand(new CombinatedLayoutPage())
                         }
                     }
             };

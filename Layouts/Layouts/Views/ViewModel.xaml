@@ -2,13 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Layouts.Views.ViewModel">
-  <StackLayout Spacing="20" HorizontalOptions="Center" VerticalOptions="Center" >
+  <ScrollView>
+    <StackLayout Spacing="15" HorizontalOptions="Center" VerticalOptions="Center" >
 
-    <Label x:Name ="LabelToClick" Text ="Click Me" HorizontalTextAlignment="Center"></Label>
-    <Label x:Name ="ClickedLabel" HorizontalTextAlignment="Center"></Label>
+      <Label x:Name ="LabelToClick" Text ="Click Me" HorizontalTextAlignment="Center"></Label>
+      <Label x:Name ="ClickedLabel" HorizontalTextAlignment="Center"></Label>
 
-    <!-- Some Views has Clicked property where is specifed called method when Click event is fired -->
-    <Button Text ="Click Me" VerticalOptions="Center" HorizontalOptions="Center" Clicked="ButtonClick"/>
-    <Label x:Name ="ClickedButton" HorizontalTextAlignment="Center"></Label>
-  </StackLayout>
+      <!-- Some Views has Clicked property where is specifed called method when Click event is fired -->
+      <Button Text ="Click Me" VerticalOptions="Center" HorizontalOptions="Center" Clicked="ButtonClick"/>
+      <Label x:Name ="ClickedButton" HorizontalTextAlignment="Center"></Label>
+
+      <Entry TextChanged="TexChanged"></Entry>
+      <Label x:Name ="ChangedText" HorizontalTextAlignment="Center"></Label>
+    </StackLayout>
+  </ScrollView>
 </ContentPage>
