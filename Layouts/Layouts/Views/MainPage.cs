@@ -44,6 +44,11 @@ namespace Layouts.Views
                         {
                             Text = "Absolute + Grid + Styles",
                             Command = showPageCommand(new CombinatedLayoutPage())
+                        },
+                                                new Button
+                        {
+                            Text = "CustomPage",
+                            Command = showPageCommand(new Page1())
                         }
                     }
             };
